@@ -10,12 +10,13 @@
 
   <style>
     :root {
-      /* Gen Z inspired soft beige/brown palette */
-      --bg-light: #f8f4ef;
-      --bg-accent: #d6bfa9;
-      --accent: #c19073;
-      --text-main: #4a3f35;
-      --text-muted: #8b7d70;
+      /* Neutral modern palette */
+      --bg-light: #f7f5f2; /* soft beige */
+      --bg-accent: #e2d8cf; /* stone/taupe */
+      --accent: #b68a67; /* warm neutral */
+      --text-main: #3e3e3e; /* dark grey */
+      --text-muted: #7a726b; /* muted grey-brown */
+      --card-bg: #ffffff;
     }
 
     * {
@@ -41,11 +42,11 @@
       justify-content: space-between;
       align-items: center;
       z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     header h1 {
       font-size: 1.5rem;
-      color: var(--text-main);
       font-weight: 600;
     }
 
@@ -53,7 +54,7 @@
       color: var(--text-main);
       text-decoration: none;
       margin-left: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -62,30 +63,35 @@
     }
 
     section {
-      min-height: 100vh;
       padding: 4rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
 
-    section p {
+    section p.section-intro {
       color: var(--text-muted);
-      max-width: 600px;
-      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    /* Hero section */
+    #home {
+      text-align: center;
+    }
+
+    #home img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
     }
 
     .btn {
@@ -100,7 +106,35 @@
     }
 
     .btn:hover {
-      background: #ad7556;
+      background: #9f7352;
+    }
+
+    /* Cards for services/testimonials */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -109,11 +143,6 @@
       font-size: 0.9rem;
       color: var(--text-muted);
       background: var(--bg-accent);
-    }
-
-    /* Alternate background for better section separation */
-    #about, #testimonials {
-      background-color: #f0e8df;
     }
   </style>
 </head>
@@ -131,44 +160,71 @@
   </header>
 
   <section id="home">
-    <img src="https://via.placeholder.com/800x400?text=Your+Hero+Image" alt="Hero image">
+    <img src="https://via.placeholder.com/1200x400?text=Hero+Image" alt="Hero image">
     <h2>Welcome to Nureyi Cleaning Services</h2>
-    <p>
+    <p class="section-intro">
       Providing spotless, reliable, and professional cleaning solutions for homes and businesses.
     </p>
     <a href="#services" class="btn">Explore Our Services</a>
   </section>
 
   <section id="about">
-    <img src="https://via.placeholder.com/600x400?text=About+Us+Photo" alt="About us photo">
     <h2>About Us</h2>
-    <p>
+    <p class="section-intro">
       At Nureyi Cleaning Services, we pride ourselves on attention to detail, trustworthiness, and delivering outstanding results every time.
     </p>
+    <img src="https://via.placeholder.com/900x400?text=About+Us+Image" alt="About us image" style="width:100%;border-radius:12px;">
   </section>
 
   <section id="services">
-    <img src="https://via.placeholder.com/600x400?text=Services+Photo" alt="Services photo">
     <h2>Products & Services</h2>
-    <p>
+    <p class="section-intro">
       From regular home cleaning to deep commercial cleans, we offer a range of services tailored to your needs.
     </p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Home+Cleaning" alt="Home cleaning">
+        <h3>Home Cleaning</h3>
+        <p>Regular and one-off cleans to keep your home fresh and spotless.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Office+Cleaning" alt="Office cleaning">
+        <h3>Office Cleaning</h3>
+        <p>Professional commercial cleaning that makes your workspace shine.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Deep+Cleaning" alt="Deep cleaning">
+        <h3>Deep Cleaning</h3>
+        <p>Thorough cleans for end-of-tenancy, moving in, or special occasions.</p>
+      </div>
+    </div>
   </section>
 
   <section id="testimonials">
-    <img src="https://via.placeholder.com/600x400?text=Happy+Client" alt="Client testimonial image">
     <h2>Testimonials</h2>
-    <p>
-      “Nureyi Cleaning Services transformed our office — we’ve never seen it this clean!” – Happy Client
+    <p class="section-intro">
+      See what our happy clients have to say.
     </p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Happy+Client" alt="Client">
+        <p>“Nureyi Cleaning Services transformed our office — we’ve never seen it this clean!”</p>
+        <strong>- TBC.</strong>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Satisfied+Customer" alt="Client">
+        <p>“Friendly, reliable, and attention to detail. Highly recommended!”</p>
+        <strong>- TBC</strong>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
-    <img src="https://via.placeholder.com/600x400?text=Contact+Us" alt="Contact us image">
     <h2>Contact Us</h2>
-    <p>
+    <p class="section-intro">
       Ready to book your clean? Get in touch with our friendly team today.
     </p>
+    <img src="https://via.placeholder.com/900x400?text=Contact+Us+Image" alt="Contact us" style="width:100%;border-radius:12px;margin-bottom:1rem;">
     <a href="mailto:info@nureyicleaningservices.co.uk" class="btn">Email Us</a>
   </section>
 
@@ -178,3 +234,4 @@
 
 </body>
 </html>
+
