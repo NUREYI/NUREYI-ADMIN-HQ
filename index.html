@@ -6,15 +6,16 @@
   <title>Nureyi Cleaning Services</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #1e1e2f;
-      --bg-light: #ffffff;
-      --accent: #f9a826;
-      --text-main: #eaeaea;
-      --text-muted: #a1a1a1;
+      /* Gen Z inspired soft beige/brown palette */
+      --bg-light: #f8f4ef;
+      --bg-accent: #d6bfa9;
+      --accent: #c19073;
+      --text-main: #4a3f35;
+      --text-muted: #8b7d70;
     }
 
     * {
@@ -25,16 +26,15 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-dark);
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
       color: var(--text-main);
       line-height: 1.6;
     }
 
     header {
       padding: 1rem 2rem;
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(10px);
+      background: var(--bg-accent);
       position: sticky;
       top: 0;
       display: flex;
@@ -45,7 +45,8 @@
 
     header h1 {
       font-size: 1.5rem;
-      color: var(--accent);
+      color: var(--text-main);
+      font-weight: 600;
     }
 
     nav a {
@@ -66,8 +67,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
     }
 
     section h2 {
@@ -84,7 +91,7 @@
     .btn {
       display: inline-block;
       background: var(--accent);
-      color: var(--bg-dark);
+      color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       font-weight: 600;
@@ -93,7 +100,7 @@
     }
 
     .btn:hover {
-      background: #ffb947;
+      background: #ad7556;
     }
 
     footer {
@@ -101,12 +108,12 @@
       text-align: center;
       font-size: 0.9rem;
       color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.02);
+      background: var(--bg-accent);
     }
 
-    /* Section background alternation */
+    /* Alternate background for better section separation */
     #about, #testimonials {
-      background-color: rgba(255, 255, 255, 0.02);
+      background-color: #f0e8df;
     }
   </style>
 </head>
@@ -124,6 +131,7 @@
   </header>
 
   <section id="home">
+    <img src="https://via.placeholder.com/800x400?text=Your+Hero+Image" alt="Hero image">
     <h2>Welcome to Nureyi Cleaning Services</h2>
     <p>
       Providing spotless, reliable, and professional cleaning solutions for homes and businesses.
@@ -132,6 +140,7 @@
   </section>
 
   <section id="about">
+    <img src="https://via.placeholder.com/600x400?text=About+Us+Photo" alt="About us photo">
     <h2>About Us</h2>
     <p>
       At Nureyi Cleaning Services, we pride ourselves on attention to detail, trustworthiness, and delivering outstanding results every time.
@@ -139,6 +148,7 @@
   </section>
 
   <section id="services">
+    <img src="https://via.placeholder.com/600x400?text=Services+Photo" alt="Services photo">
     <h2>Products & Services</h2>
     <p>
       From regular home cleaning to deep commercial cleans, we offer a range of services tailored to your needs.
@@ -146,6 +156,7 @@
   </section>
 
   <section id="testimonials">
+    <img src="https://via.placeholder.com/600x400?text=Happy+Client" alt="Client testimonial image">
     <h2>Testimonials</h2>
     <p>
       “Nureyi Cleaning Services transformed our office — we’ve never seen it this clean!” – Happy Client
@@ -153,17 +164,17 @@
   </section>
 
   <section id="contact">
+    <img src="https://via.placeholder.com/600x400?text=Contact+Us" alt="Contact us image">
     <h2>Contact Us</h2>
     <p>
       Ready to book your clean? Get in touch with our friendly team today.
     </p>
-    <a href="mailto:info@nureyicleaning.com" class="btn">Email Us</a>
+    <a href="mailto:info@nureyicleaningservices.co.uk" class="btn">Email Us</a>
   </section>
 
   <footer>
-    &copy; 2025 Nureyi Cleaning Services. All rights reserved.
+    &copy; 2025 Nureyi Consulting Ltd. All rights reserved.
   </footer>
 
 </body>
 </html>
-
